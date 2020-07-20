@@ -1,0 +1,152 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("../assets/Banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: visible;
+  background-position-y: -40px;
+}
+
+body .caption {
+  font-size: 85px;
+  color: #ecf1fb;
+  font-weight: 990;
+  line-height: 85px;
+  margin-left: 5rem;
+  margin-top: 4rem;
+}
+
+body .buttonSty {
+  background-color: #ecf1fb;
+  height: 70px;
+  width: 70px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border: none;
+  background-image: url(../assets/Sparrowbird.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40% 50%;
+  -webkit-box-shadow: 3px 6px 5px grey;
+          box-shadow: 3px 6px 5px grey;
+}
+
+body .button-holder {
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+}
+
+body .forms .init-form-holder {
+  display: none;
+  background-color: #ecf1fb;
+  position: fixed;
+  bottom: 150px;
+  right: 55px;
+  height: 320px;
+  width: 390px;
+  border-radius: 7px;
+  padding-top: 10px;
+}
+
+body .forms .init-form-holder .init-form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+body .forms .init-form-holder .init-form .upper {
+  background-color: #4C5AA1;
+  border-radius: 8px;
+  color: #ecf1fb;
+  padding: 25px;
+  height: 125px;
+  width: 343px;
+  margin-top: 8px;
+}
+
+body .forms .init-form-holder .init-form .lower {
+  margin-top: 16px;
+  border-radius: 8px;
+  color: #0C003A;
+  padding: 22px;
+  line-height: 8px;
+  height: 80px;
+  width: 333px;
+}
+
+body .forms .init-form-holder .init-form .lower .start {
+  background-color: #13A884;
+  border: none;
+  color: #ecf1fb;
+  height: 50px;
+  width: 233px;
+  border-radius: 38px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 140px;
+  color: #ecf1fb;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar-brand {
+  -webkit-box-flex: 0.45;
+      -ms-flex: 0.45;
+          flex: 0.45;
+  font-weight: bolder;
+  font-size: 25px;
+  letter-spacing: 1px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 30px;
+}
+
+header nav {
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  font-size: 18px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #ecf1fb;
+  padding: 5px 28px;
+}
+
+header nav ul li.active a {
+  color: #0C003A;
+  background-color: #ecf1fb;
+  border-radius: 1.5em;
+  font-weight: bold;
+  padding: 5px 28px 5px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

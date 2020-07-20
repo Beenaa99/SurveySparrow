@@ -1,0 +1,17 @@
+<script>
+      fetch('https://api.adviceslip.com/advice')
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+  
+      console.log(data.slip)
+      const {id, advice} = data.slip
+      console.log(id)
+      console.log(advice)
+      
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+  </script>

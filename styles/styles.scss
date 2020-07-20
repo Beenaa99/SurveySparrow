@@ -1,0 +1,162 @@
+$lgtBlue : #7F8AC5;
+$green : #13A884;
+$medBlue : #4C5AA1;
+$white : #ecf1fb;
+$darkB : #0C003A;
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../assets/Banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: visible;
+    background-position-y: -40px;
+    .caption{
+        font-size: 85px;
+        color: $white;
+        font-weight: 990;
+        line-height: 85px;
+        margin-left: 5rem;
+        margin-top: 4rem;
+    }
+    .buttonSty{
+        background-color:$white;
+        height: 70px;
+        width: 70px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border: none;
+        background-image: url(../assets/Sparrowbird.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40% 50%;
+        box-shadow: 3px 6px 5px grey;
+        
+        
+    }
+    .button-holder{
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+    }
+    .forms{
+        .init-form-holder{
+            display: none;
+            background-color: $white;
+            position: fixed;
+            bottom: 150px;
+            right: 55px;
+            height: 320px;
+            width: 390px;
+           
+            border-radius: 7px;
+            padding-top: 10px;
+            
+            .init-form{
+                
+                
+                
+                justify-content: center;
+                height: 50px;
+                .upper{
+                    background-color: $medBlue;
+                    border-radius: 8px;
+                    color: $white;
+                    padding: 25px;
+                    height: 125px;
+                    width: 343px;
+                    margin-top: 8px;
+                }
+                .lower{
+                    margin-top: 16px;
+                    border-radius: 8px;
+                    color: $darkB;
+                    padding: 22px;
+                    line-height: 8px;
+                    height: 80px;
+                    width: 333px;
+                    
+                    .start{
+                        background-color: $green;
+                        border: none;
+                        color: $white;
+                        height: 50px;
+                        width: 233px;
+                        border-radius: 38px;
+                        padding-right: 20px;
+                        padding-left: 20px;
+                        margin-top: 10px;
+                        
+                     }   
+                }
+                
+                   
+                       
+
+                   
+            }
+
+
+            }
+
+        }
+
+    }
+
+
+
+    
+    
+header{
+    display: flex;
+    height: 140px;
+    color: $white;
+    align-items: center;
+   .navbar-brand{
+       flex: 0.45;
+       font-weight: bolder;
+       font-size: 25px;
+       letter-spacing: 1px;
+       justify-content: center;
+       padding-left: 30px;
+       
+}
+    
+    nav{
+        flex:0.7;
+        justify-content: center;
+    
+        margin: 0;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: inline-block;
+                font-size: 18px;
+                
+                a{
+                    display: inline-block;
+                    color: $white;
+                    padding: 5px 28px;
+                    
+                   
+                    
+                }
+                &.active{
+                    a{
+                        color: $darkB;
+                        background-color: $white;
+                        border-radius: 1.5em;
+                        font-weight: bold;
+                        padding: 5px 28px 5px;
+                        margin-left: 10px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

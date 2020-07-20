@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+    <link href="./styles/styles.scss" type="text/scss" rel="stylesheet">
+    <link href="./styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="./styles/forms.css" type="text/css" rel="stylesheet">
+    <title>Maxeon</title>
+    
+    
+
+  </head>
+  <body>
+  <header>
+    <div class="navbar-brand">
+      Maxeon
+    </div>
+    <nav >
+      <ul>
+        <li>
+          <a href="#">Products</a>
+        </li>
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#">Use Cases</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li class="active">
+          <a href="#">Login</a>
+        </li>
+    </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="col">
+      
+    <div class="caption col-xl-3 col-md-4 col-sm-3"> Where words fail, Music speaks</div>
+  </div>
+  
+  </main>
+  
+  <div class="button-holder">
+    <button class="buttonSty" onclick="openForm1()"></button>
+  </div>
+  <div class="forms">
+  <div class="init-form-holder" id="myForm1">
+    <div class="init-form row">
+      <div class="upper">
+        <h4>Hi There</h4>
+      <p style="font-size: 15px;"> Hello Ask Us Anything, Share Your Feedback.</p>
+    </div>
+      <div class="lower">
+        <p style="font-weight: bold;">        Start a Conversation</p>
+        <p style="font-size: 13px;"> The team typically replies in a few minutes.</p>
+        <button class="start" > New Conversation icon</button>
+      </div>
+      
+        
+      
+    </div>
+    
+  </div>
+</div>
+<script>
+  function openForm1() {
+    var x = document.getElementById("myForm1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  </script>
+</body>
+ 
+</html>
