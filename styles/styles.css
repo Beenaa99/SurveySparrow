@@ -59,7 +59,7 @@ body .forms .init-form-holder .init-form {
 }
 
 body .forms .init-form-holder .init-form .upper {
-  background-color: #4C5AA1;
+  background-color: #7F8AC5;
   border-radius: 8px;
   color: #ecf1fb;
   padding: 25px;
@@ -88,6 +88,91 @@ body .forms .init-form-holder .init-form .lower .start {
   padding-right: 20px;
   padding-left: 20px;
   margin-top: 10px;
+}
+
+body .forms .chat-holder {
+  display: block;
+  background-color: #ecf1fb;
+  position: fixed;
+  bottom: 150px;
+  right: 55px;
+  height: 420px;
+  width: 420px;
+  border-radius: 7px;
+  padding-top: 10px;
+}
+
+body .forms .chat-holder .chat-form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+body .forms .chat-holder .chat-form .upper {
+  background-color: #7F8AC5;
+  border-radius: 8px;
+  color: #ecf1fb;
+  padding: 15px;
+  height: 100px;
+  width: 383px;
+  margin-top: 8px;
+}
+
+body .forms .chat-holder .chat-form .lower {
+  border-radius: 8px;
+  color: #ecf1fb;
+  height: 250px;
+  width: 383px;
+  margin-top: 8px;
+}
+
+body .forms .chat-holder .chat-form .lower .messageUser {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  background-color: #4C5AA1;
+  color: #ecf1fb;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  top: 20px;
+  right: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+body .forms .chat-holder .chat-form .lower .messageBot {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  background-color: lightgray;
+  color: #0C003A;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  top: 20px;
+  right: 10px;
+  margin-right: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 header {

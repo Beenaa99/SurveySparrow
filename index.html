@@ -10,8 +10,7 @@
     <link href="./styles/styles.css" type="text/css" rel="stylesheet">
     <link href="./styles/forms.css" type="text/css" rel="stylesheet">
     <title>Maxeon</title>
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
   <body>
@@ -50,6 +49,9 @@
   <div class="button-holder">
     <button class="buttonSty" onclick="openForm1()"></button>
   </div>
+  <div>
+    <input id="btnToggle" class="buttonSty" type="submit" onclick="add()"/>
+  </div>
   <div class="forms">
   <div class="init-form-holder" id="myForm1">
     <div class="init-form row">
@@ -60,17 +62,31 @@
       <div class="lower">
         <p style="font-weight: bold;">        Start a Conversation</p>
         <p style="font-size: 13px;"> The team typically replies in a few minutes.</p>
-        <button class="start" > New Conversation icon</button>
+        <button class="start" onclick="openForm2()" > New Conversation icon</button>
       </div>
-      
-        
-      
+      </div>
     </div>
-    
-  </div>
+    <div class="chat-holder" id="myForm2" >
+      <div class="chat-form row">
+        <div class="upper">
+          <h4>Hi There</h4>
+        <p style="font-size: 15px;"> The team typically replies in a few minutes.</p>
+
+      </div>
+        <div class="lower" style="overflow-y: scroll;">
+          
+        </div>
+        <div class="userMsg">
+        <input class="a" type="text" placeholder="Write a reply" id="userInput"/>
+      </div>
+        </div>
+      </div>
+
+
 </div>
 <script>
-  function openForm1() {
+
+ function openForm1() {
     var x = document.getElementById("myForm1");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -78,7 +94,47 @@
     x.style.display = "none";
   }
   }
-  </script>
+
+  function openForm2(){
+    document.getElementById("myForm1").style.display = "none";
+    document.getElementById("myForm2").style.display = "block";
+  }
+
+
+
+  //fetching from thr given api
+ 
+
+ 
+   
+    
+    function add(){
+      var inp = document.getElementById("userInput").value;
+      console.log(inp);
+        var txt = $("<div></div>").addClass("messageUser").text(inp);
+        $("div.lower").append(txt);
+
+
+        fetch('https://api.adviceslip.com/advice')
+        .then((response) => {
+            return response.json()
+            }, 8000)
+        .then((data) => {
+  
+        console.log(data.slip)
+        advice = data.slip.advice;
+        var botTxt = $("<div></div>").addClass("messageBot").text(advice);
+        $("div.lower").append(botTxt);
+        })
+        .catch((err) => {
+           console.error(err)
+    })};
+    $("card-holder.lower").animate({ scrollBottom: 2000 }, "slow");
+      
+      
+    
+
+    </script>
 </body>
  
 </html>

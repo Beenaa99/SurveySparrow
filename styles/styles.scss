@@ -60,7 +60,7 @@ body{
                 justify-content: center;
                 height: 50px;
                 .upper{
-                    background-color: $medBlue;
+                    background-color: $lgtBlue;
                     border-radius: 8px;
                     color: $white;
                     padding: 25px;
@@ -91,13 +91,84 @@ body{
                      }   
                 }
                 
-                   
-                       
-
-                   
             }
+        }
+            .chat-holder{
+                display: block;
+                background-color: $white;
+                position: fixed;
+                bottom: 150px;
+                right: 55px;
+                height: 420px;
+                width: 420px;
+                border-radius: 7px;
+                padding-top: 10px;
+                
+                .chat-form{
+                    justify-content: center;
+                    height: 50px;
+                    .upper{
+                        background-color: $lgtBlue;
+                        border-radius: 8px;
+                        color: $white;
+                        padding: 15px;
+                        height: 100px;
+                        width: 383px;
+                        margin-top: 8px;
+                    }
+                    .lower{
+                        overflow-y:auto;
+                        border-radius: 8px;
+                        color: $white;
+                        height: 280px;
+                        width: 383px;
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                        
+                        .messageUser{
+                            align-items: center;
+                            justify-content: center;
+                            padding: 15px;
+                            background-color: $medBlue;
+                            color: $white;
+                            width:fit-content;
+                            height: fit-content;
+                            top: 20px;
+                            right: 10px;
+                            margin-left: auto;
+                            margin-right: 10px;
+                            margin-top: 10px;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            border-bottom-left-radius: 10px;
 
+                        }
+                        .messageBot{
+                            align-items: center;
+                            justify-content: center;
+                            padding: 15px;
+                            background-color: lightgray;
+                            color: $darkB;
+                            width:fit-content;
+                            height:fit-content;
+                            top: 17px;
+                            right: 10px;
+                            margin-right: auto;
+                            margin-left: 10px;
+                            margin-top: 10px;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
 
+                        }
+                    }
+                    
+                    
+                       
+                           
+    
+                       
+                }
             }
 
         }
