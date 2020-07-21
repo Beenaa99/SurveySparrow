@@ -14,15 +14,21 @@ body {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 650px) {
   body {
-    background-size: auto 105%;
+    background-size: 100% 120%;
   }
 }
 
 @media screen and (max-width: 2180px) {
   body {
-    background-size: auto 105%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    background-size: 100% 120%;
   }
 }
 
@@ -33,7 +39,7 @@ body {
 }
 
 body .caption {
-  font-size: 98px;
+  font-size: 90px;
   color: #ecf1fb;
   font-weight: 990;
   line-height: 85px;
@@ -42,6 +48,7 @@ body .caption {
           animation: mymove 3s forwards;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
+  padding-top: 50px;
 }
 
 @-webkit-keyframes mymove {
@@ -64,7 +71,7 @@ body .caption {
 
 @media screen and (max-width: 1080px) {
   body .caption {
-    padding-top: 130px;
+    padding-top: 50px;
   }
 }
 
@@ -90,22 +97,6 @@ body .caption {
     to {
       left: 2rem;
     }
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  body .caption div {
-    font-size: 175px;
-    padding-top: 30px;
-    line-height: 150px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body .caption div {
-    font-size: 80px;
-    padding: 0px;
-    margin-top: -15px;
   }
 }
 
@@ -347,24 +338,24 @@ body .forms .chat-holder .chat-form .lower .messageBot {
   border-bottom-right-radius: 10px;
 }
 
-.brand {
+body .brand {
   padding: 0px;
   margin: 3px;
 }
 
-.brand img {
+body .brand img {
   height: 15px;
   width: 15px;
   margin: inherit;
 }
 
-.brand p {
+body .brand p {
   font-size: 12px;
   padding-left: 15px;
   margin: inherit;
 }
 
-.userMsg {
+body .userMsg {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-top: 2px solid #ccc;
@@ -374,36 +365,36 @@ body .forms .chat-holder .chat-form .lower .messageBot {
   margin-top: 0px;
 }
 
-.userMsg input {
+body .userMsg input {
   border: none;
   outline: none;
   width: 300px;
   background-color: #ecf1fb;
 }
 
-.userMsg input:focus {
+body .userMsg input:focus {
   border: none;
   outline: none;
 }
 
 @media screen and (max-width: 480px) {
-  .userMsg input {
+  body .userMsg input {
     width: 300px;
   }
 }
 
-.userMsg button {
+body .userMsg button {
   border: none;
   opacity: 0.6;
 }
 
-.userMsg button:focus {
+body .userMsg button:focus {
   border: none;
   outline: none;
 }
 
 @media screen and (max-width: 480px) {
-  .userMsg button {
+  body .userMsg button {
     right: 0;
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -458,7 +449,7 @@ header .navbar-brand-cont p {
   header .navbar-brand-cont p {
     margin-left: 2rem;
     margin-top: 1rem;
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
