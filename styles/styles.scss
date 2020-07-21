@@ -14,6 +14,22 @@ $darkB : #0C003A;
             }
         
     }
+    @mixin laptop-xl {
+        @media screen and (max-width:2180px){
+            @content;
+            }
+        
+    }
+    @mixin laptop-md {
+        @media screen and (max-width:750px){
+            @content;
+            }
+        }
+            @mixin laptop-sm {
+                @media screen and (max-width:650px){
+                    @content;
+                    }
+                }
     @mixin hgt{
         @media screen and (max-height:1190px){
             @content;
@@ -34,11 +50,14 @@ body{
     @include laptop-lg{
         background-size: auto 105%;
     }
+    @include laptop-xl{
+        background-size: auto 105%;
+    }
     @include hgt{
         background-size: cover;
     }
     .caption{
-        font-size: 85px;
+        font-size: 98px;
         color: $white;
         font-weight: 990;
         line-height: 85px;
@@ -51,7 +70,7 @@ body{
                     }
 
         @include laptop-lg{
-            font-size: 105px;
+            
             padding-top: 130px;
         }
         @include phone{
@@ -66,8 +85,9 @@ body{
         }
         div{
             @include laptop-lg{
-                font-size: 105px;
+                font-size: 175px;
                 padding-top: 30px;
+                line-height: 150px;
             }
             @include phone{
                 
@@ -100,14 +120,29 @@ body{
         @include phone{
             opacity: 0.8;
         }
+        @include laptop-lg{
+            height: 150px;
+            width: 150px;
+            border-top-left-radius: 90px;
+            border-top-right-radius: 90px;
+            border-bottom-left-radius: 90px;
+        }
     }
     .button-holder{
         position: absolute;
         bottom: 20px;
         right: 30px;
         @include phone{
-            bottom: 20px;
-            right: 30px;
+            
+        }
+        @include laptop-lg{
+            bottom: -380px;
+            right: -15rem;
+        }
+        @include laptop-md{
+            bottom: -390px;
+            right: -18rem;
+
         }
     }
     .forms{
@@ -124,10 +159,18 @@ body{
             @include phone{
                 height: 350px;
             }
+            @include laptop-lg{
+                bottom: 310px;
+                right: 140px;
+                padding-top: 10px;
+
+
+            }
             
             .init-form{
                 justify-content: center;
                 height: 50px;
+            
                 .upper{
                     background-color: $lgtBlue;
                     border-radius: 8px;
@@ -141,6 +184,7 @@ body{
                             font-size: 20px;
                         }
                     }
+                    
                 }
                 .lower1{
                     margin-top: 16px;
@@ -184,6 +228,13 @@ body{
                 width: 420px;
                 border-radius: 7px;
                 padding-top: 10px;
+                @include laptop-lg{
+                    bottom: 310px;
+                    right: 140px;
+                    
+                    padding-top: 10px;
+    
+                }
                 
                 .chat-form{
                     justify-content: center;
@@ -342,10 +393,15 @@ header{
         margin-top: 1rem;
 
         }
+        @include laptop-sm(){
+            margin-left: 2rem;
+        margin-top: 1rem;
+        font-size: 60px;
 
-       }
+    }
        
 }
+   }
     .navbar{
         float: right;
         flex: 1.15;
@@ -364,9 +420,14 @@ header{
             margin: 0;
             padding: 0;
             width: 210%;
+        
             @include phone{
                 margin-top: -24px;
                 margin-left: -22px;
+            }
+            @include laptop-sm{
+                margin-top: -374px;
+                margin-left: -72px;
             }
             
 
@@ -379,6 +440,12 @@ header{
                     padding: 2%;
                     font-weight: bold;
                     
+                }
+                @include laptop-sm{
+                    display: block;
+                    padding: 2%;
+                    font-weight: bold;
+
                 }
                 
                 a{

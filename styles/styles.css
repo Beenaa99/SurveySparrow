@@ -20,6 +20,12 @@ body {
   }
 }
 
+@media screen and (max-width: 2180px) {
+  body {
+    background-size: auto 105%;
+  }
+}
+
 @media screen and (max-height: 1190px) {
   body {
     background-size: cover;
@@ -27,7 +33,7 @@ body {
 }
 
 body .caption {
-  font-size: 85px;
+  font-size: 98px;
   color: #ecf1fb;
   font-weight: 990;
   line-height: 85px;
@@ -58,7 +64,6 @@ body .caption {
 
 @media screen and (max-width: 1080px) {
   body .caption {
-    font-size: 105px;
     padding-top: 130px;
   }
 }
@@ -90,8 +95,9 @@ body .caption {
 
 @media screen and (max-width: 1080px) {
   body .caption div {
-    font-size: 105px;
+    font-size: 175px;
     padding-top: 30px;
+    line-height: 150px;
   }
 }
 
@@ -130,16 +136,33 @@ body .buttonSty:focus {
   }
 }
 
+@media screen and (max-width: 1080px) {
+  body .buttonSty {
+    height: 150px;
+    width: 150px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+  }
+}
+
 body .button-holder {
   position: absolute;
   bottom: 20px;
   right: 30px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1080px) {
   body .button-holder {
-    bottom: 20px;
-    right: 30px;
+    bottom: -380px;
+    right: -15rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body .button-holder {
+    bottom: -390px;
+    right: -18rem;
   }
 }
 
@@ -158,6 +181,14 @@ body .forms .init-form-holder {
 @media screen and (max-width: 480px) {
   body .forms .init-form-holder {
     height: 350px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body .forms .init-form-holder {
+    bottom: 310px;
+    right: 140px;
+    padding-top: 10px;
   }
 }
 
@@ -227,6 +258,14 @@ body .forms .chat-holder {
   width: 420px;
   border-radius: 7px;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 1080px) {
+  body .forms .chat-holder {
+    bottom: 310px;
+    right: 140px;
+    padding-top: 10px;
+  }
 }
 
 body .forms .chat-holder .chat-form {
@@ -415,6 +454,14 @@ header .navbar-brand-cont p {
   }
 }
 
+@media screen and (max-width: 650px) {
+  header .navbar-brand-cont p {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 60px;
+  }
+}
+
 header .navbar {
   float: right;
   -webkit-box-flex: 1.15;
@@ -446,6 +493,13 @@ header .navbar nav ul {
   }
 }
 
+@media screen and (max-width: 650px) {
+  header .navbar nav ul {
+    margin-top: -374px;
+    margin-left: -72px;
+  }
+}
+
 header .navbar nav ul li {
   padding: 4%;
   display: inline-block;
@@ -454,6 +508,14 @@ header .navbar nav ul li {
 }
 
 @media screen and (max-width: 480px) {
+  header .navbar nav ul li {
+    display: block;
+    padding: 2%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 650px) {
   header .navbar nav ul li {
     display: block;
     padding: 2%;
