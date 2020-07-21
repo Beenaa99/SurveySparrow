@@ -3,6 +3,23 @@ $green : #13A884;
 $medBlue : #4C5AA1;
 $white : #ecf1fb;
 $darkB : #0C003A;
+@mixin phone {
+    @media screen and (max-width:480px){
+        @content;
+        }
+    }
+    @mixin laptop-lg {
+        @media screen and (max-width:1080px){
+            @content;
+            }
+        
+    }
+    @mixin hgt{
+        @media screen and (max-height:1190px){
+            @content;
+            }
+        }
+
 body{
     font-family: 'Montserrat', sans-serif;
     background-image: url("../assets/Banner.png");
@@ -11,13 +28,56 @@ body{
     background-attachment: fixed;
     overflow: visible;
     background-position-y: -40px;
+    @include phone{
+        background-size: cover;
+    }
+    @include laptop-lg{
+        background-size: auto 105%;
+    }
+    @include hgt{
+        background-size: cover;
+    }
     .caption{
         font-size: 85px;
         color: $white;
         font-weight: 990;
         line-height: 85px;
-        margin-left: 5rem;
         margin-top: 4rem;
+        animation: mymove 3s forwards;
+        animation-timing-function: ease;
+        @keyframes mymove {
+                    from {left: 0px;}
+                    to {left: 5rem;}
+                    }
+
+        @include laptop-lg{
+            font-size: 105px;
+            padding-top: 130px;
+        }
+        @include phone{
+            left: 2rem;
+            font-size: 50px;
+            margin-top: -80px;
+            padding: 0px;
+            @keyframes mymove {
+                from {left: 0px;}
+                to {left: 2rem;}
+                }
+        }
+        div{
+            @include laptop-lg{
+                font-size: 105px;
+                padding-top: 30px;
+            }
+            @include phone{
+                
+                font-size: 80px;
+                padding: 0px;
+                margin-top: -15px;
+            }
+            
+
+        }
     }
     .buttonSty{
         background-color:$white;
@@ -32,31 +92,40 @@ body{
         background-repeat: no-repeat;
         background-size: 40% 50%;
         box-shadow: 3px 6px 5px grey;
-        
-        
+
+        &:focus{
+            border: none;
+            outline: none;
+        }
+        @include phone{
+            opacity: 0.8;
+        }
     }
     .button-holder{
-        position: fixed;
-        bottom: 60px;
-        right: 50px;
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        @include phone{
+            bottom: 20px;
+            right: 30px;
+        }
     }
     .forms{
         .init-form-holder{
             display: none;
             background-color: $white;
             position: fixed;
-            bottom: 150px;
-            right: 55px;
+            bottom: 110px;
+            right: 40px;
             height: 320px;
             width: 390px;
-           
             border-radius: 7px;
             padding-top: 10px;
+            @include phone{
+                height: 350px;
+            }
             
             .init-form{
-                
-                
-                
                 justify-content: center;
                 height: 50px;
                 .upper{
@@ -67,8 +136,13 @@ body{
                     height: 125px;
                     width: 343px;
                     margin-top: 8px;
+                    @include phone{
+                        p{
+                            font-size: 20px;
+                        }
+                    }
                 }
-                .lower{
+                .lower1{
                     margin-top: 16px;
                     border-radius: 8px;
                     color: $darkB;
@@ -76,6 +150,9 @@ body{
                     line-height: 8px;
                     height: 80px;
                     width: 333px;
+                    @include phone{
+                        height: 180px;
+                    }
                     
                     .start{
                         background-color: $green;
@@ -86,7 +163,11 @@ body{
                         border-radius: 38px;
                         padding-right: 20px;
                         padding-left: 20px;
-                        margin-top: 10px;
+                        margin-top: 8%;
+                        &:focus{
+                            outline: none;
+                            border: none;
+                        }
                         
                      }   
                 }
@@ -94,11 +175,11 @@ body{
             }
         }
             .chat-holder{
-                display: block;
+                display:none;
                 background-color: $white;
                 position: fixed;
-                bottom: 150px;
-                right: 55px;
+                bottom: 110px;
+                right: 40px;
                 height: 420px;
                 width: 420px;
                 border-radius: 7px;
@@ -120,7 +201,7 @@ body{
                         overflow-y:auto;
                         border-radius: 8px;
                         color: $white;
-                        height: 280px;
+                        height: 200px;
                         width: 383px;
                         margin-top: 8px;
                         margin-bottom: 8px;
@@ -153,7 +234,7 @@ body{
                             height:fit-content;
                             top: 17px;
                             right: 10px;
-                            margin-right: auto;
+                            margin-right: 90px;
                             margin-left: 10px;
                             margin-top: 10px;
                             border-top-left-radius: 10px;
@@ -162,18 +243,74 @@ body{
 
                         }
                     }
-                    
-                    
-                       
-                           
-    
-                       
-                }
+
+                   }
             }
 
         }
 
     }
+    .brand{
+        padding: 0px;
+        margin: 3px;
+        img{
+            height: 15px;
+            width: 15px;
+            margin: inherit;
+        }
+        p{
+            font-size: 12px;
+            padding-left: 15px;
+            margin: inherit;
+            
+        }
+    }
+    .userMsg{
+
+        box-sizing: border-box;
+        border-top: 2px solid #ccc;
+        
+        font-size: 16px;
+        padding: 12px 24px 12px 40px;
+        width: 400px;
+        margin-top: 0px;
+        
+        input {
+            border: none;
+            outline: none;
+            width: 300px;
+            background-color: $white;
+            
+            &:focus{
+                border: none;
+                outline: none;
+                
+            }
+            @include phone{
+                width: 300px;
+            }
+            
+        
+    }
+        button{
+            border: none;
+            opacity: 0.6;
+            &:focus{
+                border: none;
+                outline: none;
+            }
+            
+                @include phone{
+                    right: 0;
+                    align-items: flex-end;
+
+                }
+            
+        
+        } 
+        
+    }
+
 
 
 
@@ -181,37 +318,81 @@ body{
     
 header{
     display: flex;
-    height: 140px;
+    height: 120px;
     color: $white;
-    align-items: center;
-   .navbar-brand{
-       flex: 0.45;
-       font-weight: bolder;
-       font-size: 25px;
-       letter-spacing: 1px;
+    
+    @include phone{
+            height: 350px;
+    }
+   .navbar-brand-cont{
+       flex: 0.65;
        justify-content: center;
-       padding-left: 30px;
+       
+       p{
+        width: fit-content;
+        font-weight: bolder;
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin: 0px;
+        margin-left: 5rem;
+        margin-top: 3rem;
+        padding: 0px;
+        @include phone{
+            margin-left: 2rem;
+        margin-top: 1rem;
+
+        }
+
+       }
        
 }
+    .navbar{
+        float: right;
+        flex: 1.15;
+        @include phone{
+            margin-left: -40%;
+        }
     
+
+
     nav{
-        flex:0.7;
-        justify-content: center;
-    
         margin: 0;
-        ul{
+
+
+        ul{ 
             list-style: none;
             margin: 0;
             padding: 0;
+            width: 210%;
+            @include phone{
+                margin-top: -24px;
+                margin-left: -22px;
+            }
+            
 
-            li{
+            li{ padding: 4%;
                 display: inline-block;
                 font-size: 18px;
+                margin-right: 10px;
+                @include phone{
+                    display: block;
+                    padding: 2%;
+                    font-weight: bold;
+                    
+                }
                 
                 a{
                     display: inline-block;
                     color: $white;
-                    padding: 5px 28px;
+                    
+                    &:focus{
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        font-size: 20px;
+                        animation: 1s ease;
+                        text-decoration: none;
+                    }
                     
                    
                     
@@ -221,9 +402,15 @@ header{
                         color: $darkB;
                         background-color: $white;
                         border-radius: 1.5em;
-                        font-weight: bold;
+                        font-weight: 600;
                         padding: 5px 28px 5px;
                         margin-left: 10px;
+                        @include phone{
+                            margin-left: 120%;
+                            opacity: 0.6;
+                            font-weight: 600;
+                            padding: 15px 28px 15px;
+                        }
                     }
                     
                 }
@@ -231,3 +418,5 @@ header{
         }
     }
 }
+}
+

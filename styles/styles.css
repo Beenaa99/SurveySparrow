@@ -8,13 +8,99 @@ body {
   background-position-y: -40px;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    background-size: auto 105%;
+  }
+}
+
+@media screen and (max-height: 1190px) {
+  body {
+    background-size: cover;
+  }
+}
+
 body .caption {
   font-size: 85px;
   color: #ecf1fb;
   font-weight: 990;
   line-height: 85px;
-  margin-left: 5rem;
   margin-top: 4rem;
+  -webkit-animation: mymove 3s forwards;
+          animation: mymove 3s forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 5rem;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 5rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body .caption {
+    font-size: 105px;
+    padding-top: 130px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body .caption {
+    left: 2rem;
+    font-size: 50px;
+    margin-top: -80px;
+    padding: 0px;
+  }
+  @-webkit-keyframes mymove {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 2rem;
+    }
+  }
+  @keyframes mymove {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body .caption div {
+    font-size: 105px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body .caption div {
+    font-size: 80px;
+    padding: 0px;
+    margin-top: -15px;
+  }
 }
 
 body .buttonSty {
@@ -33,22 +119,46 @@ body .buttonSty {
           box-shadow: 3px 6px 5px grey;
 }
 
+body .buttonSty:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  body .buttonSty {
+    opacity: 0.8;
+  }
+}
+
 body .button-holder {
-  position: fixed;
-  bottom: 60px;
-  right: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  body .button-holder {
+    bottom: 20px;
+    right: 30px;
+  }
 }
 
 body .forms .init-form-holder {
   display: none;
   background-color: #ecf1fb;
   position: fixed;
-  bottom: 150px;
-  right: 55px;
+  bottom: 110px;
+  right: 40px;
   height: 320px;
   width: 390px;
   border-radius: 7px;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  body .forms .init-form-holder {
+    height: 350px;
+  }
 }
 
 body .forms .init-form-holder .init-form {
@@ -68,7 +178,13 @@ body .forms .init-form-holder .init-form .upper {
   margin-top: 8px;
 }
 
-body .forms .init-form-holder .init-form .lower {
+@media screen and (max-width: 480px) {
+  body .forms .init-form-holder .init-form .upper p {
+    font-size: 20px;
+  }
+}
+
+body .forms .init-form-holder .init-form .lower1 {
   margin-top: 16px;
   border-radius: 8px;
   color: #0C003A;
@@ -78,7 +194,13 @@ body .forms .init-form-holder .init-form .lower {
   width: 333px;
 }
 
-body .forms .init-form-holder .init-form .lower .start {
+@media screen and (max-width: 480px) {
+  body .forms .init-form-holder .init-form .lower1 {
+    height: 180px;
+  }
+}
+
+body .forms .init-form-holder .init-form .lower1 .start {
   background-color: #13A884;
   border: none;
   color: #ecf1fb;
@@ -87,15 +209,20 @@ body .forms .init-form-holder .init-form .lower .start {
   border-radius: 38px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-top: 10px;
+  margin-top: 8%;
+}
+
+body .forms .init-form-holder .init-form .lower1 .start:focus {
+  outline: none;
+  border: none;
 }
 
 body .forms .chat-holder {
-  display: block;
+  display: none;
   background-color: #ecf1fb;
   position: fixed;
-  bottom: 150px;
-  right: 55px;
+  bottom: 110px;
+  right: 40px;
   height: 420px;
   width: 420px;
   border-radius: 7px;
@@ -120,11 +247,13 @@ body .forms .chat-holder .chat-form .upper {
 }
 
 body .forms .chat-holder .chat-form .lower {
+  overflow-y: auto;
   border-radius: 8px;
   color: #ecf1fb;
-  height: 250px;
+  height: 200px;
   width: 383px;
   margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 body .forms .chat-holder .chat-form .lower .messageUser {
@@ -140,7 +269,9 @@ body .forms .chat-holder .chat-form .lower .messageUser {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   top: 20px;
   right: 10px;
   margin-left: auto;
@@ -164,10 +295,12 @@ body .forms .chat-holder .chat-form .lower .messageBot {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 50px;
-  top: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 17px;
   right: 10px;
-  margin-right: auto;
+  margin-right: 90px;
   margin-left: 10px;
   margin-top: 10px;
   border-top-left-radius: 10px;
@@ -175,63 +308,190 @@ body .forms .chat-holder .chat-form .lower .messageBot {
   border-bottom-right-radius: 10px;
 }
 
+.brand {
+  padding: 0px;
+  margin: 3px;
+}
+
+.brand img {
+  height: 15px;
+  width: 15px;
+  margin: inherit;
+}
+
+.brand p {
+  font-size: 12px;
+  padding-left: 15px;
+  margin: inherit;
+}
+
+.userMsg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid #ccc;
+  font-size: 16px;
+  padding: 12px 24px 12px 40px;
+  width: 400px;
+  margin-top: 0px;
+}
+
+.userMsg input {
+  border: none;
+  outline: none;
+  width: 300px;
+  background-color: #ecf1fb;
+}
+
+.userMsg input:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  .userMsg input {
+    width: 300px;
+  }
+}
+
+.userMsg button {
+  border: none;
+  opacity: 0.6;
+}
+
+.userMsg button:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  .userMsg button {
+    right: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 140px;
+  height: 120px;
   color: #ecf1fb;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-header .navbar-brand {
-  -webkit-box-flex: 0.45;
-      -ms-flex: 0.45;
-          flex: 0.45;
+@media screen and (max-width: 480px) {
+  header {
+    height: 350px;
+  }
+}
+
+header .navbar-brand-cont {
+  -webkit-box-flex: 0.65;
+      -ms-flex: 0.65;
+          flex: 0.65;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .navbar-brand-cont p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: bolder;
-  font-size: 25px;
-  letter-spacing: 1px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-left: 30px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin: 0px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  padding: 0px;
 }
 
-header nav {
-  -webkit-box-flex: 0.7;
-      -ms-flex: 0.7;
-          flex: 0.7;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (max-width: 480px) {
+  header .navbar-brand-cont p {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+header .navbar {
+  float: right;
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15;
+          flex: 1.15;
+}
+
+@media screen and (max-width: 480px) {
+  header .navbar {
+    margin-left: -40%;
+  }
+}
+
+header .navbar nav {
   margin: 0;
 }
 
-header nav ul {
+header .navbar nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 210%;
 }
 
-header nav ul li {
+@media screen and (max-width: 480px) {
+  header .navbar nav ul {
+    margin-top: -24px;
+    margin-left: -22px;
+  }
+}
+
+header .navbar nav ul li {
+  padding: 4%;
   display: inline-block;
   font-size: 18px;
+  margin-right: 10px;
 }
 
-header nav ul li a {
+@media screen and (max-width: 480px) {
+  header .navbar nav ul li {
+    display: block;
+    padding: 2%;
+    font-weight: bold;
+  }
+}
+
+header .navbar nav ul li a {
   display: inline-block;
   color: #ecf1fb;
-  padding: 5px 28px;
 }
 
-header nav ul li.active a {
+header .navbar nav ul li a:focus {
+  text-decoration: none;
+}
+
+header .navbar nav ul li a:hover {
+  font-size: 20px;
+  -webkit-animation: 1s ease;
+          animation: 1s ease;
+  text-decoration: none;
+}
+
+header .navbar nav ul li.active a {
   color: #0C003A;
   background-color: #ecf1fb;
   border-radius: 1.5em;
-  font-weight: bold;
+  font-weight: 600;
   padding: 5px 28px 5px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  header .navbar nav ul li.active a {
+    margin-left: 120%;
+    opacity: 0.6;
+    font-weight: 600;
+    padding: 15px 28px 15px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
